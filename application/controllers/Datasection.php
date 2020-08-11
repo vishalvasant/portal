@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller
+class Datasection extends CI_Controller
 {
 	public $data = [];
 
@@ -36,9 +36,7 @@ class Dashboard extends CI_Controller
 		{
             $data['data'] = '';
             $data['title'] = 'Dashboard';
-			$data['path'] = 'dashboard';
-			$data['email'] = $this->session->userdata('email');
-			
+            $data['path'] = 'dashboard';
 			$this->load->view('page_view',$data);
 		}
 	}

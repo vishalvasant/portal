@@ -2,13 +2,13 @@
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-          <a class="navbar-brand brand-logo" href="index.html">
+          <a class="navbar-brand brand-logo" href="<?php echo base_url();?>">
             <img src="<?php echo base_url();?>assets/images/logo.svg" alt="logo" /> </a>
-          <a class="navbar-brand brand-logo-mini" href="index.html">
+          <a class="navbar-brand brand-logo-mini" href="<?php echo base_url();?>">
             <img src="<?php echo base_url();?>assets/images/logo-mini.svg" alt="logo" /> </a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">
-          <ul class="navbar-nav">
+          <!-- <ul class="navbar-nav">
             <li class="nav-item font-weight-semibold d-none d-lg-block">Help : +050 2992 709</li>
             <li class="nav-item dropdown language-dropdown">
               <a class="nav-link dropdown-toggle px-2 d-flex align-items-center" id="LanguageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -42,12 +42,12 @@
                 </a>
               </div>
             </li>
-          </ul>
-          <form class="ml-auto search-form d-none d-md-block" action="#">
+          </ul> -->
+          <!-- <form class="ml-auto search-form d-none d-md-block" action="#">
             <div class="form-group">
               <input type="search" class="form-control" placeholder="Search Here">
             </div>
-          </form>
+          </form> -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
               <a class="nav-link count-indicator" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -131,14 +131,14 @@
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
                   <img class="img-md rounded-circle" src="<?php echo base_url();?>assets/images/faces/face8.jpg" alt="Profile image">
-                  <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
-                  <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
+                  <p class="mb-1 mt-3 font-weight-semibold"><?php echo $email; ?></p>
+                  <p class="font-weight-light text-muted mb-0"></p>
                 </div>
                 <a class="dropdown-item">My Profile <span class="badge badge-pill badge-danger">1</span><i class="dropdown-item-icon ti-dashboard"></i></a>
                 <a class="dropdown-item">Messages<i class="dropdown-item-icon ti-comment-alt"></i></a>
                 <a class="dropdown-item">Activity<i class="dropdown-item-icon ti-location-arrow"></i></a>
                 <a class="dropdown-item">FAQ<i class="dropdown-item-icon ti-help-alt"></i></a>
-                <a class="dropdown-item">Sign Out<i class="dropdown-item-icon ti-power-off"></i></a>
+                <a class="dropdown-item" href="<?php echo base_url();?>auth/logout">Sign Out<i class="dropdown-item-icon ti-power-off"></i></a>
               </div>
             </li>
           </ul>
@@ -166,12 +166,24 @@
             </li>
             <li class="nav-item nav-category">Main Menu</li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="<?php echo base_url();?>dashboard">
                 <i class="menu-icon typcn typcn-document-text"></i>
                 <span class="menu-title">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url();?>datasection">
+                <i class="fa fa-database"></i>
+                <span class="menu-title">Database</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url();?>leadsection">
+                <i class="fa fa-database"></i>
+                <span class="menu-title">Lead Manage</span>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <i class="menu-icon typcn typcn-coffee"></i>
                 <span class="menu-title">Basic UI Elements</span>
@@ -240,6 +252,6 @@
                   </li>
                 </ul>
               </div>
-            </li>
+            </li> -->
           </ul>
         </nav>
